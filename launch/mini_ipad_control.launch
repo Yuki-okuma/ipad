@@ -1,0 +1,12 @@
+<!-- mini_ipad_control.launch -->
+
+<launch>
+  
+  <!-- コントロール用ノード -->
+  <node pkg="sobit_mini_bringup" type="sobit_mini_ipad_control.py" name="sobit_mini_ipad_control" output="screen"/>
+
+  <!-- サーバー用 -->
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+  <include file="$(find roswww)/launch/roswww.launch" />
+
+</launch>
